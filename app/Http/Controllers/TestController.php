@@ -12,4 +12,8 @@ class TestController extends Controller
     function __construct() {
     	$this->middleware('oauth');
     }
+
+    public function hello() {
+    	return 'You made it in!';
+    }
 }
