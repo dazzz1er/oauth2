@@ -23,3 +23,5 @@ Route::post('/hello', 'TestController@hello');
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
 });
+
+Route::post('chats', 'ChatController@store');

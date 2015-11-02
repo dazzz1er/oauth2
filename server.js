@@ -9,7 +9,17 @@ redis.subscribe('test-channel', function(err, count) {
 });
 
 io.on('connection', function(socket) {
-  console.log('a user connected');
+  	console.log('a user connected');
+
+  	socket.on('message', function(message) {
+    	console.log('server received message: ' + message);
+    	io.emit('test-channel:Test', 'message in message');
+	});
+
+	socket.on('test-channel:Test', function(message) {
+    	console.log('server received message: ' + message);
+    	io.emit('test-channel:Test', message);
+	});
 });
 
 //io.set('transports',['xhr-polling','jsonp-polling']); apply this if websocket is failing to connect on modern browsers
