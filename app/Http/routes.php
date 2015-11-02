@@ -1,5 +1,7 @@
 <?php
 
+use App\Realtime\RealtimeBroadcaster;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -12,6 +14,7 @@
 */
 
 Route::get('/', function () {
+	RealtimeBroadcaster::broadcast();
     return view('welcome');
 });
 
