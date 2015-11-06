@@ -14,7 +14,7 @@ class TestController extends Controller
     }
 
     public function hello() {
-    	$test_var = "roflcopters";
+    	$test_var = 1;
     	guard($test_var)->isString()->equal('roflcopters')->otherwise(function() {
     		throw new \Exception('Failed guard!');
     	});
