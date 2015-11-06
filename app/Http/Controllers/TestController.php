@@ -14,8 +14,8 @@ class TestController extends Controller
     }
 
     public function hello() {
-    	$test_var = 1;
-    	guard($test_var)->isString()->equal('roflcopters')->otherwise(function() {
+    	$test_var = "can not fly";
+    	(new \App\Guard\TestSiteGuard($test_var))->canFly()->otherwise(function() {
     		throw new \Exception('Failed guard!');
     	});
     	return 'You made it in!';
