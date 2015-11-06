@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8dca451538d607fbb418ad922347f4fe",
-    "content-hash": "90d523242b989f283e1341a073bacdc6",
+    "hash": "68507f7e54048c381397abbc0e308f0b",
+    "content-hash": "f028838ef5375783b9242942a32bef9e",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -116,6 +116,45 @@
                 "utils"
             ],
             "time": "2015-07-23 00:54:12"
+        },
+        {
+            "name": "djb/guard",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dazzz1er/guard.git",
+                "reference": "28f9ab667878c2f41dbf293cce8372623f5aeac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dazzz1er/guard/zipball/28f9ab667878c2f41dbf293cce8372623f5aeac0",
+                "reference": "28f9ab667878c2f41dbf293cce8372623f5aeac0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DJB\\Guard\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan James Britchford",
+                    "email": "danbritchford@gmail.com"
+                }
+            ],
+            "description": "Swift 2 inspired guard feature for PHP",
+            "time": "2015-11-06 16:44:04"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1013,6 +1052,61 @@
                 "random"
             ],
             "time": "2015-10-23 13:21:37"
+        },
+        {
+            "name": "predis/predis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "6bc1a38123f61efde92d8b4a73adabf168e09442"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/6bc1a38123f61efde92d8b4a73adabf168e09442",
+                "reference": "6bc1a38123f61efde92d8b4a73adabf168e09442",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete PHP client library for Redis",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2015-07-30 18:51:15"
         },
         {
             "name": "psr/log",
@@ -3126,8 +3220,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "predis/predis": 20,
+        "djb/guard": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
