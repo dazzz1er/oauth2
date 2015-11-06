@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/hello', 'TestController@hello');
+Route::get('/hello', 'TestController@hello');
 
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
