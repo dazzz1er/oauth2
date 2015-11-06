@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 class TestController extends Controller
 {
     function __construct() {
-    	$this->middleware('oauth');
+    	//$this->middleware('oauth');
     }
 
     public function hello() {
